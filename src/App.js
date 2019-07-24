@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import LandingComponent from './app/components/LandingComponent';
+import AlertComponent from './app/components/AlertComponent';
+import ContextWrapper from './app/provider/ContextProvider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextWrapper>
+        <div className="App">
+            <LandingComponent />
+            <AlertComponent />
+        </div>
+    </ContextWrapper>
   );
 }
 
